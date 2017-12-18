@@ -1,0 +1,95 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// QUESTION 1
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+The code provided for Question 1 implements an Observer resembling the "Clock Observer" code as show during the lectures 
+to explain the Observer pattern. In this case for this question, the observer only prints out the seconds as computed by 
+the ClockTimer Object.  
+
+Augment this code using the Decorator pattern, so that the decorated observer can display the minutes and hours as
+computed by the clock. In your design, the class "DigitalClockObserver" corresponds to the "Component" 
+element of the design of the Decorator pattern. 
+
+You need to implement the following: 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// PART 1:
+// Implement a Decorator class named "ObserverDecorator" that corresponds to the "Decorator" element of the Decorator design pattern 
+// (see slidesSet8, p56).
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// PART 2:
+// Implement a Decorator class named "MinutesDecorator" that corresponds to a "ConcreteDecorator" element of the Decorator design 
+// pattern (see course slidesSet8, p56). This decorator should have the effect of displaying the minutes as computed by the clock.  
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// PART 3:
+// Implement a Decorator class named "HoursDecorator" that corresponds to a "ConcreteDecorator" element of the Decorator design 
+// pattern (see course slidesSet8, p56). This decorator should have the effect of displaying the hours as computed by the clock.  
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+The default behavior, as done by the existing DigitalClockObserver is to display only the seconds. When the DigitalClockObserver is 
+decorated with the MinutesDecorator, it then also displays the minutes. When the DigitalClockObserver is decorated with the 
+HoursDecorator, it then also displays the hours. When the DigitalClockObserver is decorated with the MinutesDecorator and the 
+HoursDecorator, it then also displays the minutes and hours. 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+//
+// Part 4: 
+// Use the following main() function in your resulting code: 
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+int main() {
+	//Create a ClockTimer to be observed
+	ClockTimer *timer = new ClockTimer;
+
+	//Create a DigitalClock that is connected to the ClockTimer  
+	DigitalClockObserver *digitalClock = new DigitalClockObserver(timer);
+	digitalClock = new MinutesDecorator(digitalClock);
+	digitalClock = new HoursDecorator(digitalClock);
+
+	//Advancing the ClockTimer updates the DigitalClock
+	//as Tick() calls Update() after it changed its state
+	int secs;
+	cout << "Enter number of seconds to count: ";
+	cin >> secs;
+	timer->start(secs);
+
+	int j;  cin >> j;
+
+	return 0;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Executing this main function should result in the following console output (only beginning and end shown for a 5000 seconds run) : 
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Enter number of seconds to count: 5000
+1 seconds 0 minutes 0 hours
+2 seconds 0 minutes 0 hours
+3 seconds 0 minutes 0 hours
+4 seconds 0 minutes 0 hours
+... (skipped)
+17 seconds 23 minutes 1 hours
+18 seconds 23 minutes 1 hours
+19 seconds 23 minutes 1 hours
+20 seconds 23 minutes 1 hours
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// END OF QUESTION 1
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
