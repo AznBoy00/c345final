@@ -10,6 +10,5 @@ class DigitalClockObserver : public Observer {
 	void Update(); 
 	void display(); 
 	string constructDisplayString();
-  private:
-	ClockTimer *_subject;
+ 	ClockTimer *_subject;
 };
