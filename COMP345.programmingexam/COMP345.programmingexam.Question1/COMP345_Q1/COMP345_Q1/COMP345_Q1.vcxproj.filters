@@ -15,39 +15,33 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ClockDriver.cpp">
+    <ClCompile Include="..\ClockDriver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ClockTimer.cpp">
+    <ClCompile Include="..\ClockTimer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DigitalClockObserver.cpp">
+    <ClCompile Include="..\DigitalClockObserver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Observer.cpp">
+    <ClCompile Include="..\Observer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Subject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ObserverDecorator.cpp">
+    <ClCompile Include="..\Subject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ClockTimer.h">
+    <ClInclude Include="..\ClockTimer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DigitalClockObserver.h">
+    <ClInclude Include="..\DigitalClockObserver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Observer.h">
+    <ClInclude Include="..\Observer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Subject.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ObserverDecorator.h">
+    <ClInclude Include="..\Subject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

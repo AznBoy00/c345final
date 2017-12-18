@@ -18,6 +18,19 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\ClockDriver.cpp" />
+    <ClCompile Include="..\ClockTimer.cpp" />
+    <ClCompile Include="..\DigitalClockObserver.cpp" />
+    <ClCompile Include="..\Observer.cpp" />
+    <ClCompile Include="..\Subject.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\ClockTimer.h" />
+    <ClInclude Include="..\DigitalClockObserver.h" />
+    <ClInclude Include="..\Observer.h" />
+    <ClInclude Include="..\Subject.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{1F9AAA3D-9D2D-4512-AE1B-13011C341DEF}</ProjectGuid>
@@ -138,21 +151,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="ClockDriver.cpp" />
-    <ClCompile Include="ClockTimer.cpp" />
-    <ClCompile Include="DigitalClockObserver.cpp" />
-    <ClCompile Include="Observer.cpp" />
-    <ClCompile Include="ObserverDecorator.cpp" />
-    <ClCompile Include="Subject.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="ClockTimer.h" />
-    <ClInclude Include="DigitalClockObserver.h" />
-    <ClInclude Include="Observer.h" />
-    <ClInclude Include="ObserverDecorator.h" />
-    <ClInclude Include="Subject.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
