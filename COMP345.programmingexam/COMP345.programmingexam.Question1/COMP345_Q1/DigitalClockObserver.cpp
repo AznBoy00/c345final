@@ -19,7 +19,7 @@ void DigitalClockObserver::Update(){
   display();
 }; 
 void DigitalClockObserver::display(){
-	cout << constructDisplayString() << endl;
+	cout << constructDisplayString() ;
 };
 string DigitalClockObserver::constructDisplayString(){
 	string toDisplay; 
